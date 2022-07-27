@@ -1,0 +1,24 @@
+(biasOnTheWeb
+ (rcond_1 0
+  (rcond_1-1 nil 3866726430
+   ("" (flatten)
+    (("" (expand vies)
+      (("" (flatten)
+        (("" (lemma ax1)
+          (("" (assert)
+            (("" (lemma ax2)
+              (("" (split)
+                (("1" (flatten) nil nil) ("2" (propax) nil nil)
+                 ("3" (propax) nil nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((vies const-decl "bool" biasOnTheWeb nil)
+    (ax1 formula-decl nil biasOnTheWeb nil)
+    (ax2 formula-decl nil biasOnTheWeb nil))
+   shostak)))
+
