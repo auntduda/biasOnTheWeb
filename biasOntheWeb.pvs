@@ -15,24 +15,23 @@ BEGIN
 %  Social, scientific and industrial positions regarding ecological systems and
 %  scientific knowledge and facts about climate change. 
 
-pessoas_nao_especialistas :  bool
-especialistas : bool                    % Popular efforts to promote environmental reforms.
-saber_sobre_assunto :  bool             % Consumerism and predatory industrial explorarion.
-dar_sugestao_solucao :  bool            % Ignorance and beliefs in non scientific facts.
-vies_atividade :   bool                 % Lack of interest of the scientific community to % make accessible knowlegde and facts. 
-vies_dados : bool                       % Belief in "plan B"
-vies_algoritmo : bool                   % Existence of a "Planet B".
-vies_UI : bool
+specialist : bool                       % Popular efforts to promote environmental reforms.
+knowledge :  bool                       % Consumerism and predatory industrial explorarion.
+suggest :  bool                         % Ignorance and beliefs in non scientific facts.
+activity_bias :   bool                  % Lack of interest of the scientific community to % make accessible knowlegde and facts. 
+data_bias : bool                        % Belief in "plan B"
+algorithmic_bias : bool                 % Existence of a "Planet B".
+UI_bias : bool
 
 %  Basic relationships among social, scientific and industrial positions 
 
-ax1: AXIOM  pessoas_nao_especialistas => NOT saber_sobre_assunto
-ax2: AXIOM  NOT saber_sobre_assunto AND dar_sugestao_solucao => vies_atividade AND vies_dados
+ax1: AXIOM  NOT specialist => NOT knowledge
+ax2: AXIOM  NOT knowledge AND suggest => activity_bias AND data_bias
 
 %  Definitions of possible environmental situations
 %inconsistencia vai ser "eu acho que acho"
 
-vies:bool = vies_atividade OR vies_dados OR vies_algoritmo OR vies_UI
+bias : bool = activity_bias OR data_bias OR algorithmic_bias OR UI_bias
 
 %%%   Propositional Formulas to prove  (for Exercise 1)
 
@@ -42,8 +41,8 @@ vies:bool = vies_atividade OR vies_dados OR vies_algoritmo OR vies_UI
 % the theory.)
 
 % @QED rcond_1 proved by master on Wed, 13 Jul 2022 18:45:47 GMT
-rcond_1: LEMMA  pessoas_nao_especialistas AND dar_sugestao_solucao => vies
+rcond_1: LEMMA  NOT specialist AND suggest => bias
 
-rcond_2: LEMMA NOT saber_sobre_assunto AND dar_sugestao_solucao => vies
+rcond_2: LEMMA NOT knowledge AND suggest => bias
 
 END biasOnTheWeb
