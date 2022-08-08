@@ -45,4 +45,8 @@ rcond_1: LEMMA  NOT specialist AND suggest => bias
 
 rcond_2: LEMMA NOT knowledge AND suggest => bias
 
+rcond_3: LEMMA specialist AND knowledge => NOT bias
+
+rcond_4: LEMMA activity_bias
+
 END biasOnTheWeb
