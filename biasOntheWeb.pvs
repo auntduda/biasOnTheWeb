@@ -12,24 +12,30 @@
 biasOnTheWeb: THEORY
 BEGIN
 
-%  Social, scientific and industrial positions regarding ecological systems and
-%  scientific knowledge and facts about climate change. 
-
-specialist : bool                       % Popular efforts to promote environmental reforms.
-knowledge :  bool                       % Consumerism and predatory industrial explorarion.
-suggest :  bool                         % Ignorance and beliefs in non scientific facts.
-activity_bias :   bool                  % Lack of interest of the scientific community to % make accessible knowlegde and facts. 
-data_bias : bool                        % Belief in "plan B"
-algorithmic_bias : bool                 % Existence of a "Planet B".
-UI_bias : bool
+specialist :        bool                % Popular efforts to promote environmental reforms.
+knowledge :         bool                % Consumerism and predatory industrial explorarion.
+belief :            bool                % Ignorance and beliefs in non scientific facts.
+activity_bias :     bool                % Lack of interest of the scientific community to % make accessible knowlegde and facts. 
+data_bias :         bool                % Belief in "plan B"
+algorithmic_bias :  bool                % Existence of a "Planet B".
+UI_bias :           bool
 
 %  Basic relationships among social, scientific and industrial positions 
 
+
 ax1: AXIOM  NOT specialist => NOT knowledge
-ax2: AXIOM  NOT knowledge AND suggest => activity_bias AND data_bias
+ax2: AXIOM NOT knowledge => data_bias 
+ax3: AXIOM  data_bias => activity_bias 
+ax4 : AXIOM  data_bias OR activity_bias => UI_bias
+ax5: AXIOM  UI_bias => belief
+%ax4: AXIOM  data_bias => 
+ax6: AXIOM  belief => algorithmic_bias 
+%ax6: AXIOM  UI_bias => ?
 
 %  Definitions of possible environmental situations
 %inconsistencia vai ser "eu acho que acho"
+
+
 
 bias : bool = activity_bias OR data_bias OR algorithmic_bias OR UI_bias
 
@@ -40,13 +46,20 @@ bias : bool = activity_bias OR data_bias OR algorithmic_bias OR UI_bias
 % may use any of these lemmas in the proofs of lemmas appearing later in
 % the theory.)
 
+% @QED data_bias_gives_belief proved by master on Wed, 10 Aug 2022 18:48:24 GMT
+data_bias_gives_belief : CONJECTURE data_bias => belief 
+
+% @QED not_specialist_builds_belief proved by master on Wed, 10 Aug 2022 18:52:07 GMT
+not_specialist_builds_belief : CONJECTURE NOT specialist => belief
+
+
 % @QED rcond_1 proved by master on Wed, 13 Jul 2022 18:45:47 GMT
-rcond_1: LEMMA  NOT specialist AND suggest => bias
+rcond_1: LEMMA  NOT specialist AND belief => bias
 
-rcond_2: LEMMA NOT knowledge AND suggest => bias
+rcond_2: LEMMA  NOT knowledge AND belief => bias
 
-rcond_3: LEMMA specialist AND knowledge => NOT bias
+rcond_3: LEMMA  specialist AND knowledge => NOT bias
 
-rcond_4: LEMMA activity_bias
+rcond_4: LEMMA  activity_bias => data_bias => algorithmic_bias => UI_bias
 
 END biasOnTheWeb

@@ -15,24 +15,6 @@
     (ax5 formula-decl nil biasOnTheWeb nil)
     (ax4 formula-decl nil biasOnTheWeb nil))
    shostak))
- (not_specialist_builds_belief 0
-  (not_specialist_builds_belief-1 nil 3869146216
-   ("" (lemma "data_bias_gives_belief")
-    (("" (lemma "ax1")
-      (("" (lemma "ax2")
-        (("" (flatten)
-          (("" (assert)
-            (("" (split)
-              (("1" (propax) nil nil) ("2" (propax) nil nil)) nil))
-            nil))
-          nil))
-        nil))
-      nil))
-    nil)
-   ((ax1 formula-decl nil biasOnTheWeb nil)
-    (ax2 formula-decl nil biasOnTheWeb nil)
-    (data_bias_gives_belief formula-decl nil biasOnTheWeb nil))
-   shostak))
  (rcond_1 0
   (rcond_1-1 nil 3866726430
    ("" (flatten)
@@ -51,7 +33,7 @@
         nil))
       nil))
     nil)
-   ((ax1 formula-decl nil biasOnTheWeb nil)
+   (nil (ax1 formula-decl nil biasOnTheWeb nil)
     (ax2 formula-decl nil biasOnTheWeb nil))
    shostak)))
 

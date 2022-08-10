@@ -1,0 +1,9 @@
+bias_research: THEORY
+
+BEGIN
+    
+    ASSUMING IMPORTING biasOnTheWeb AND public_research
+        public_research => bias
+    ENDASSUMING
+
+END bias_research

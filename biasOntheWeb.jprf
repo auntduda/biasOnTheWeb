@@ -93,5 +93,148 @@
     ]
    }
   }
+ ],
+ "biasOnTheWeb.data_bias_gives_belief": [
+  {
+   "info": {
+    "theory": "biasOnTheWeb",
+    "formula": "data_bias_gives_belief",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "bd2094038977ea45978c6a96908271e317b812032d35a64e93e3c795a7c27ae3"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "data_bias_gives_belief",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"ax3\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"ax4\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(hide -2)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"ax5\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "biasOnTheWeb.not_specialist_builds_belief": [
+  {
+   "info": {
+    "theory": "biasOnTheWeb",
+    "formula": "not_specialist_builds_belief",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "6f5d441d6ea15159d6507b96b0ef106d7ca063258ba0b2873d11d72444d60918"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "not_specialist_builds_belief",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(lemma \"data_bias_gives_belief\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"ax1\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"ax2\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(split)",
+      "type": "proof-command",
+      "rules": [
+       {
+        "branch": "1",
+        "name": "(1)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "1",
+          "name": "(propax)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       },
+       {
+        "branch": "2",
+        "name": "(2)",
+        "type": "proof-branch",
+        "rules": [
+         {
+          "branch": "2",
+          "name": "(propax)",
+          "type": "proof-command",
+          "rules": []
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
  ]
 }
