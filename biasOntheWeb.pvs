@@ -24,20 +24,16 @@ UI_bias :           bool
 
 
 ax1: AXIOM  NOT specialist => NOT knowledge
-ax2: AXIOM NOT knowledge => data_bias 
+ax2: AXIOM  NOT knowledge => data_bias 
 ax3: AXIOM  data_bias => activity_bias 
-ax4 : AXIOM  data_bias OR activity_bias => UI_bias
+ax4: AXIOM  data_bias OR activity_bias => UI_bias
 ax5: AXIOM  UI_bias => belief
-%ax4: AXIOM  data_bias => 
-ax6: AXIOM  belief => algorithmic_bias 
-%ax6: AXIOM  UI_bias => ?
+ax6: AXIOM  belief => algorithmic_bias
+bias : bool = activity_bias OR data_bias OR algorithmic_bias OR UI_bias
+ax7: AXIOM  knowledge => NOT bias
 
 %  Definitions of possible environmental situations
-%inconsistencia vai ser "eu acho que acho"
-
-
-
-bias : bool = activity_bias OR data_bias OR algorithmic_bias OR UI_bias
+%  inconsistencia vai ser "eu acho que acho"
 
 %%%   Propositional Formulas to prove  (for Exercise 1)
 
@@ -52,14 +48,20 @@ data_bias_gives_belief : CONJECTURE data_bias => belief
 % @QED not_specialist_builds_belief proved by master on Wed, 10 Aug 2022 18:52:07 GMT
 not_specialist_builds_belief : CONJECTURE NOT specialist => belief
 
-
 % @QED rcond_1 proved by master on Wed, 13 Jul 2022 18:45:47 GMT
-rcond_1: LEMMA  NOT specialist AND belief => bias
+rcond_1: LEMMA NOT specialist AND belief => bias
 
-rcond_2: LEMMA  NOT knowledge AND belief => bias
+% @QED rcond_2 proved by master on Wed, 24 Aug 2022 16:25:06 GMT
+rcond_2: LEMMA NOT knowledge AND belief => bias
 
-rcond_3: LEMMA  specialist AND knowledge => NOT bias
+% @QED rcond_3 proved by master on Wed, 24 Aug 2022 18:28:38 GMT
+rcond_3: LEMMA knowledge => specialist
 
-rcond_4: LEMMA  activity_bias => data_bias => algorithmic_bias => UI_bias
+% @QED rcond_4 proved by master on Wed, 24 Aug 2022 18:35:48 GMT
+rcond_4: LEMMA specialist AND knowledge => NOT bias
 
+% @QED rcond_5 proved by master on Wed, 24 Aug 2022 18:42:11 GMT
+rcond_5: LEMMA activity_bias => data_bias => algorithmic_bias => UI_bias
+
+% @QED rcond_5 proved by master on Wed, 24 Aug 2022 18:41:49 GMT
 END biasOnTheWeb

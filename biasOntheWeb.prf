@@ -53,5 +53,31 @@
     nil)
    ((ax1 formula-decl nil biasOnTheWeb nil)
     (ax2 formula-decl nil biasOnTheWeb nil))
-   shostak)))
+   shostak))
+ (rcond_2 0
+  (rcond_2-1 nil 3869748123
+   ("" (expand "bias")
+    (("" (flatten)
+      (("" (lemma "data_bias_gives_belief")
+        (("" (assert) (("" (lemma "ax6") (("" (assert) nil nil)) nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((ax6 formula-decl nil biasOnTheWeb nil)
+    (data_bias_gives_belief formula-decl nil biasOnTheWeb nil)
+    (bias const-decl "bool" biasOnTheWeb nil))
+   shostak))
+ (rcond_3 0
+  (rcond_3-1 nil 3870354407
+   ("" (flatten) (("" (lemma "ax1") (("" (prop) nil nil)) nil)) nil)
+   ((ax1 formula-decl nil biasOnTheWeb nil)) shostak))
+ (rcond_4 0
+  (rcond_4-1 nil 3870354764
+   ("" (flatten) (("" (lemma "ax7") (("" (assert) nil nil)) nil)) nil)
+   ((ax7 formula-decl nil biasOnTheWeb nil)) shostak))
+ (rcond_5 0
+  (rcond_5-1 nil 3870355084
+   ("" (flatten) (("" (lemma "ax4") (("" (assert) nil nil)) nil)) nil)
+   ((ax4 formula-decl nil biasOnTheWeb nil)) shostak)))
 

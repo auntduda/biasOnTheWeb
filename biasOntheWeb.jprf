@@ -236,5 +236,171 @@
     ]
    }
   }
+ ],
+ "biasOnTheWeb.rcond_2": [
+  {
+   "info": {
+    "theory": "biasOnTheWeb",
+    "formula": "rcond_2",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "6f5d441d6ea15159d6507b96b0ef106d7ca063258ba0b2873d11d72444d60918"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "rcond_2",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(expand \"bias\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"data_bias_gives_belief\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"ax6\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "biasOnTheWeb.rcond_3": [
+  {
+   "info": {
+    "theory": "biasOnTheWeb",
+    "formula": "rcond_3",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "b56b257cd095e71d1a5b6c986177b7a901b9dc5d6a447b2c90565a1b8e80f868"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "rcond_3",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"ax1\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(prop)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "biasOnTheWeb.rcond_4": [
+  {
+   "info": {
+    "theory": "biasOnTheWeb",
+    "formula": "rcond_4",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "b56b257cd095e71d1a5b6c986177b7a901b9dc5d6a447b2c90565a1b8e80f868"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "rcond_4",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"ax7\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
+ ],
+ "biasOnTheWeb.rcond_5": [
+  {
+   "info": {
+    "theory": "biasOnTheWeb",
+    "formula": "rcond_5",
+    "status": "proved",
+    "prover": "PVS 7.1.0 (Allegro CL Enterprise Edition)",
+    "shasum": "b56b257cd095e71d1a5b6c986177b7a901b9dc5d6a447b2c90565a1b8e80f868"
+   },
+   "origin": ".prf",
+   "proofTree": {
+    "branch": "",
+    "name": "rcond_5",
+    "type": "root",
+    "rules": [
+     {
+      "branch": "",
+      "name": "(flatten)",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(lemma \"ax4\")",
+      "type": "proof-command",
+      "rules": []
+     },
+     {
+      "branch": "",
+      "name": "(assert)",
+      "type": "proof-command",
+      "rules": []
+     }
+    ]
+   }
+  }
  ]
 }
