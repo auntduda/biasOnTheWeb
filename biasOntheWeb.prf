@@ -79,5 +79,28 @@
  (rcond_5 0
   (rcond_5-1 nil 3870355084
    ("" (flatten) (("" (lemma "ax4") (("" (assert) nil nil)) nil)) nil)
-   ((ax4 formula-decl nil biasOnTheWeb nil)) shostak)))
+   ((ax4 formula-decl nil biasOnTheWeb nil)) shostak))
+ (rcond_6 0
+  (rcond_6-1 nil 3870425449
+   ("" (lemma "ax7")
+    (("" (lemma "ax8") (("" (flatten) (("" (assert) nil nil)) nil))
+      nil))
+    nil)
+   ((ax8 formula-decl nil biasOnTheWeb nil)
+    (ax7 formula-decl nil biasOnTheWeb nil))
+   shostak))
+ (rcond_final 0
+  (rcond_final-1 nil 3870426167
+   ("" (flatten)
+    (("" (lemma "ax9")
+      (("" (lemma "not_specialist_builds_belief")
+        (("" (assert)
+          (("" (lemma "rcond_1") (("" (assert) nil nil)) nil)) nil))
+        nil))
+      nil))
+    nil)
+   ((ax9 formula-decl nil biasOnTheWeb nil)
+    (rcond_1 formula-decl nil biasOnTheWeb nil)
+    (not_specialist_builds_belief formula-decl nil biasOnTheWeb nil))
+   shostak)))
 
